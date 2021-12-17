@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nlp:
+    restart: always
+    build: .
+    container_name: 'nlp'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./nlp:/root/nlp/

@@ -16,7 +16,7 @@ docker compose up -d --build
 ```
 docker compose exec nlp bash
 ```
-####pythonファイル実行
+#### pythonファイル実行
 pythonファイルが存在する一つ下のディレクトリに移動
 ```
 cd nlp

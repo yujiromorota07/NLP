@@ -6,15 +6,15 @@ def check(index:int,words:list):
 
     if index==(len(words)-1):
         print(words[index][1])
-        return "OK"
+        return "This is sentence!"
     else:
-        current=words[index][0]
-        forward=words[index+1][0]
+        current=words[index][1]
+        forward=words[index+1][1]
         if check_connection(current,forward):
             print(words[index][1])
             return check(index+1,words)
         else:
-            return "ERROR"
+            return "This is not sentence!"
         
 
 
@@ -30,7 +30,7 @@ def check_connection(current,foward):
                     return False
             
             if current=="NOUN":
-                if foward!="PREP" and foward!="VERB" and foward!="ADV" and foward!="END":
+                if foward!="DET" and foward!="PREP" and foward!="VERB" and foward!="ADV" and foward!="END":
                     return False
             
             if current=="PREP":

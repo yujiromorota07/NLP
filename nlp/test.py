@@ -11,6 +11,7 @@ s = data
 # s = "I saw a girl with a telescope"
 morph = nltk.word_tokenize(s)
 # print(morph)
+
 print('------------------------------------------------------------')
 print("start")
 pos = nltk.pos_tag(morph)

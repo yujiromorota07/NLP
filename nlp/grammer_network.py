@@ -18,7 +18,7 @@ def check(index: int, words: list):
             return check(index+1, words)
         else:
             # return "This is not sentence!"
-            return [index+1, "this is not a sentence!"]
+            return [index+2, "this is not a sentence!"]
 
 
 def check_connection(current, foward):
@@ -32,7 +32,7 @@ def check_connection(current, foward):
             return False
 
     if current == "NOUN":
-        if foward != "DET" and foward != "PREP" and foward != "VERB" and foward != "ADV" and foward != "END":
+        if foward != "PREP" and foward != "VERB" and foward != "ADV" and foward != "END":
             return False
 
     if current == "PREP":

@@ -2,22 +2,14 @@
 
 
 def check(index: int, words: list):
-
     if index == (len(words)-1):
-        # print(words[index][1])
-        # return "This is sentence!"
         return [index+2, "this is a sentence!"]
     else:
         current = words[index][1]
         forward = words[index+1][1]
         if check_connection(current, forward):
-            # print(words[index][0])
-            # # print("|")
-            # print(words[index][1])
-            # print("\n")
             return check(index+1, words)
         else:
-            # return "This is not sentence!"
             return [index+2, "this is not a sentence!"]
 
 
@@ -52,4 +44,3 @@ def check_connection(current, foward):
             return False
 
     return True
-    # if current=="END":
